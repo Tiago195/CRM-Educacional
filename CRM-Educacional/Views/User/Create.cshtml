@@ -1,0 +1,29 @@
+@model UserModel
+
+<h1>Crie sua conta</h1>
+
+<form asp-controller="User" asp-action="Create" method="post">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" asp-for="Name" placeholder="your name" id="Name">
+    <label for="Name">Nome</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" asp-for="Email" id="Email" placeholder="email">
+    <label for="Email" class="form-label">Email</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" asp-for="Phone" id="Phone" placeholder="(xx) xxxxx-xxxx">
+    <label for="Phone" class="form-label">Celular</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" asp-for="CPF" id="CPF" placeholder="XXX.XXX.XXX-XX">
+    <label for="CPF" class="form-label">CPF</label>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-outline-success btn-lg" type="submit">Criar</button>
+  </div>
+</form>

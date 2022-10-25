@@ -1,0 +1,19 @@
+@model CourseModel
+
+<h1>Novo Curso</h1>
+
+<form asp-action="Create" asp-controller="Course" method="post">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" asp-for="Name" placeholder="course name" id="Name">
+    <label for="Name">Nome</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" asp-for="Duration" id="Duration" placeholder="XXX.XXX.XXX-XX">
+    <label for="Duration" class="form-label">Duração em horas</label>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-outline-success btn-lg" type="submit">Criar</button>
+  </div>
+</form>

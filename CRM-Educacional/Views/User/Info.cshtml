@@ -1,0 +1,59 @@
+@model UserInfoDto
+
+<h1 class="text-center mb-5">Suas Informações</h1>
+
+<section>
+  <section class="d-flex justify-content-around mb-5">
+
+    <section>
+      <div>
+        <h3>Nome: @Model.Name</h3>
+      </div>
+      <div>
+        <h4>CPF: @Model.CPF</h4>
+      </div>
+      <div>
+        <h4>Email: @Model.Email</h4>
+      </div>
+      <div>
+        <h4>Celular: @Model.Phone</h4>
+      </div>
+    </section>
+
+    <section>
+      <h3>Lista de cursos</h3>
+      <ul>
+        @if (Model.MyCourses != null)
+        {
+          foreach (var course in Model.MyCourses)
+          {
+            <li>
+              <span>Nome: @course.Name</span>
+              <span>Duração: @course.Duration horas</span>
+            </li>
+          }
+        }
+      </ul>
+
+    </section>
+  </section>
+  <section>
+    <h2>Outros cursos</h2>
+    <section class="d-flex flex-wrap">
+      @foreach (var item in Model.OtherCourses)
+      {
+        <section class="card m-2 fit-content">
+          <section class="card-body">
+            <h5 class="card-title mb-2">@item.Name</h5>
+            <h5 class="card-subtitle mb-4">Duração: @item.Duration horas</h5>
+            <form asp-controller="User" asp-action="Subscription" asp-route-id=@Model.Id method="post">
+              <input type="hidden" name="Id" value=@item.Id>
+              <button class="btn btn-outline-success" type="submit">cadastrar
+                candidato</button>
+            </form>
+          </section>
+        </section>
+      }
+    </section>
+  </section>
+</section>
