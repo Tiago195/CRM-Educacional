@@ -5,9 +5,9 @@ namespace CRM_Educacional.Repositories;
 
 public class UserRepository : IUserRepository
 {
-  private readonly Context _context;
+  private readonly IContext _context;
 
-  public UserRepository(Context context)
+  public UserRepository(IContext context)
   {
     _context = context;
   }
@@ -66,17 +66,14 @@ public class UserRepository : IUserRepository
   {
     var user = _context.Users.Find(userId);
     var course = _context.Courses.Find(courseId);
-    // System.Console.WriteLine(userId);
-    // System.Console.WriteLine(course.Id);
-    if (user.Courses == null)
-    {
-      user.Courses = new List<CourseModel>();
-    }
-    // System.Console.WriteLine(course.Id);
+
     user.Courses.Add(course);
 
-    // _context.Users.Update(user);
-    // _context.Entry(user).CurrentValues.SetValues(user);
     _context.SaveChanges();
+  }
+
+  public List<UserModel> Search(string userName)
+  {
+    return _context.Users.Where(x => x.Name.ToUpper().Contains(userName.ToUpper())).ToList();
   }
 }

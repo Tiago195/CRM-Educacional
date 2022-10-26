@@ -4,7 +4,7 @@ using CRM_Educacional.Models;
 
 namespace CRM_Educacional.Repositories;
 
-public class Context : DbContext
+public class Context : DbContext, IContext
 {
 
   public DbSet<UserModel> Users { get; set; }
@@ -27,20 +27,6 @@ public class Context : DbContext
     modelBuilder.Entity<UserModel>()
     .HasMany(x => x.Courses)
     .WithMany(x => x.Users);
-    // .UsingEntity<Dictionary<int, int>>(
-    //   "CourseModelUserModel",
-    //   course => course
-    //     .HasOne<CourseModel>()
-    //     .WithMany()
-    //     .HasForeignKey("CoursesId")
-    //     .HasConstraintName("FK_CourseModelUserModel_Courses_CoursesId"),
-    //   user => user
-    //     .HasOne<UserModel>()
-    //     .WithMany()
-    //     .HasForeignKey("UsersId")
-    //     .HasConstraintName("FK_CourseModelUserModel_Users_UserId"));
-    // .HasOne(p => p.Blog)
-    // .WithMany(b => b.Posts);
   }
 
 }

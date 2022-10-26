@@ -6,11 +6,13 @@
   <div class="form-floating mb-3">
     <input type="text" class="form-control" asp-for="Name" placeholder="course name" id="Name">
     <label for="Name">Nome</label>
+    @Html.ValidationMessageFor(x => x.Name)
   </div>
 
   <div class="form-floating mb-3">
     <input type="text" class="form-control" asp-for="Duration" id="Duration" placeholder="XXX.XXX.XXX-XX">
     <label for="Duration" class="form-label">Duração em horas</label>
+    @Html.ValidationMessageFor(x => x.Duration)
   </div>
 
   <div class="d-flex justify-content-end">

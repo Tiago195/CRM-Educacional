@@ -12,4 +12,5 @@ public interface IUserRepository
   UserModel? GetByCPF(UserLoginDto user);
   void Update(UserModel user);
   void Subscription(int userId, int courseId);
+  public List<UserModel> Search(string userName);
 }

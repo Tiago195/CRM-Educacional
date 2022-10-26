@@ -5,9 +5,9 @@ namespace CRM_Educacional.Repositories;
 
 public class CourseRepository : ICourseRepository
 {
-  private readonly Context _context;
+  private readonly IContext _context;
 
-  public CourseRepository(Context context)
+  public CourseRepository(IContext context)
   {
     _context = context;
   }

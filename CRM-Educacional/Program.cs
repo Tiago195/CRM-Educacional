@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<Context>();
+builder.Services.AddDbContext<IContext, Context>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 
@@ -31,3 +31,5 @@ app.MapControllerRoute(
 );
 
 app.Run();
+
+public partial class Program { }

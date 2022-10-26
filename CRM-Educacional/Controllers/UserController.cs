@@ -27,6 +27,8 @@ public class UserController : Controller
   [HttpPost]
   public IActionResult Create(UserModel user)
   {
+    if (!ModelState.IsValid) return View(user);
+
     _repository.Create(user);
 
     return RedirectToAction("Index");
@@ -58,12 +60,5 @@ public class UserController : Controller
     _repository.Subscription(id, int.Parse(Request.Form["Id"]));
     return RedirectToAction("Info", new { id = id });
   }
-
-  // public IActionResult Subscription(int id)
-  // {
-  //   // _repository.Subscription(user, course);
-  //   System.Console.WriteLine(id);
-  //   return View();
-  // }
 
 }

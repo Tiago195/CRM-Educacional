@@ -27,6 +27,7 @@ public class CourseController : Controller
   [HttpPost]
   public IActionResult Create(CourseModel course)
   {
+    if (!ModelState.IsValid) return View(course);
     _repository.Create(course);
     return RedirectToAction("Index");
   }

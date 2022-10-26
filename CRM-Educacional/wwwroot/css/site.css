@@ -16,3 +16,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.footer {
+  color: blue;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.field-validation-error {
+  color: #e01d1d;
+}
