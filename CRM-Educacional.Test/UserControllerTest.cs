@@ -11,7 +11,7 @@ namespace CRM_Educacional.Test;
 public class UserControllerTest
 {
   [Fact]
-  public async void Index()
+  public void Index()
   {
     var mockRepository = new Mock<IUserRepository>();
     mockRepository.Setup(x => x.GetAll()).Returns(Helpers.GetUsers());

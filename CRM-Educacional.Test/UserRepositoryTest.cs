@@ -9,12 +9,10 @@ namespace CRM_Educacional.Test;
 
 public class UserRepositoryTest
 {
-
-
   [Fact]
-  public async void TestGetAll()
+  public void TestGetAll()
   {
-    var repository = new UserRepository(Helpers.GetContext("get"));
+    var repository = new UserRepository(Helpers.GetContext("getAll"));
 
     var users = repository.GetAll();
 
@@ -72,7 +70,7 @@ public class UserRepositoryTest
   public void TestSubscriptionCaseSuccess()
   {
     // Given
-    var repository = new UserRepository(Helpers.GetContext("update"));
+    var repository = new UserRepository(Helpers.GetContext("subscription"));
     var user = new UserModel() { Name = "userThree", Email = "userThree@gmail.com", CPF = "35175968452", Phone = "(32) 95175-3518" };
 
     // When
@@ -93,7 +91,7 @@ public class UserRepositoryTest
   public void TestSubscriptionCaseFails()
   {
     // Given
-    var repository = new UserRepository(Helpers.GetContext("update"));
+    var repository = new UserRepository(Helpers.GetContext("subscription"));
 
     Action act = () => repository.Subscription(99, 99);
 
