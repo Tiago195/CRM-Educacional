@@ -21,24 +21,14 @@ public class CourseRepository : ICourseRepository
   {
     var course = _context.Courses.Find(id);
 
+    if (course == null) throw new ArgumentNullException();
+
     return course;
   }
 
   public void Create(CourseModel course)
   {
     _context.Courses.Add(course);
-    _context.SaveChanges();
-  }
-
-  public void Update(CourseModel course)
-  {
-    _context.Courses.Update(course);
-    _context.SaveChanges();
-  }
-
-  public void Delete(CourseModel course)
-  {
-    _context.Courses.Remove(course);
     _context.SaveChanges();
   }
 }

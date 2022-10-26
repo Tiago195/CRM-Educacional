@@ -29,7 +29,7 @@ public class CourseController : Controller
   {
     if (!ModelState.IsValid) return View(course);
     _repository.Create(course);
-    return RedirectToAction("Index");
+    return View("Index");
   }
 
 }

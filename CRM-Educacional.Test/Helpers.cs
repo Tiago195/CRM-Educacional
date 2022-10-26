@@ -1,13 +1,6 @@
 using CRM_Educacional.Models;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading;
-using System.Threading.Tasks;
-using AngleSharp;
-using AngleSharp.Html.Dom;
-using AngleSharp.Io;
-using CRM_Educacional.Repositories;
 using Microsoft.EntityFrameworkCore;
+using CRM_Educacional.Dtos;
 
 namespace CRM_Educacional.Test;
 
@@ -43,6 +36,29 @@ public static class Helpers
     };
   }
 
+  public static UserInfoDto GetUser()
+  {
+    return new UserInfoDto()
+    {
+      Id = 1,
+      Name = "userOne",
+      Email = "userOne@email.com",
+      CPF = "94872978048",
+      Phone = "(79) 96913-9992",
+      MyCourses = new List<CourseModel>() {
+          new CourseModel {
+            Name = "Java",
+            Duration = "1000"
+          },
+        },
+      OtherCourses = new List<CourseModel>() {
+          new CourseModel {
+            Name = "C#",
+            Duration = "800"
+          }
+        }
+    };
+  }
   public static List<CourseModel> GetCourses()
   {
     return new List<CourseModel>()

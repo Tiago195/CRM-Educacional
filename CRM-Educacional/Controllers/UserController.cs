@@ -31,34 +31,32 @@ public class UserController : Controller
 
     _repository.Create(user);
 
-    return RedirectToAction("Index");
-  }
-
-  public IActionResult Login()
-  {
-    return View();
-  }
-
-  [HttpPost]
-  public IActionResult Login(UserLoginDto user)
-  {
-    var userExist = _repository.GetByCPF(user);
-
-    if (userExist == null) return BadRequest();
-
-    return RedirectToAction("Info", new { id = userExist.Id });
+    return View("Index", _repository.GetAll());
   }
 
   public IActionResult Info(int id)
   {
-    var user = _repository.GetById(id);
-    return View(user);
+    try
+    {
+      return View(_repository.GetById(id));
+    }
+    catch (System.Exception)
+    {
+      return View("NotFound");
+    }
   }
 
   public IActionResult Subscription([FromRoute] int id)
   {
-    _repository.Subscription(id, int.Parse(Request.Form["Id"]));
-    return RedirectToAction("Info", new { id = id });
+    try
+    {
+      _repository.Subscription(id, int.Parse(Request.Form["Id"]));
+      return View("Info", new { id = id });
+    }
+    catch (System.Exception)
+    {
+      return View("NotFound");
+    }
   }
 
 }

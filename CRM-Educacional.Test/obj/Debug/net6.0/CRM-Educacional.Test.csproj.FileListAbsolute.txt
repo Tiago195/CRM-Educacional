@@ -439,3 +439,5 @@
 /home/tiago/CRM-Educacional/CRM-Educacional.Test/obj/Debug/net6.0/CRM-Educacional.Test.genruntimeconfig.cache
 /home/tiago/CRM-Educacional/CRM-Educacional.Test/obj/Debug/net6.0/ref/CRM-Educacional.Test.dll
 /home/tiago/CRM-Educacional/CRM-Educacional.Test/bin/Debug/net6.0/AngleSharp.dll
+/home/tiago/CRM-Educacional/CRM-Educacional.Test/bin/Debug/net6.0/Castle.Core.dll
+/home/tiago/CRM-Educacional/CRM-Educacional.Test/bin/Debug/net6.0/Moq.dll

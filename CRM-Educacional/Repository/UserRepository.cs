@@ -23,6 +23,8 @@ public class UserRepository : IUserRepository
     var courses = _context.Courses.Where(x => x.Users.Any(e => e.Id == userId)).ToList();
     var otherCourses = _context.Courses.Where(x => x.Users.All(e => e.Id != userId)).ToList();
 
+    if (user == null) throw new ArgumentNullException($"user id: {userId} not found");
+
     var userInfo = new UserInfoDto
     {
       Id = user.Id,
@@ -43,37 +45,15 @@ public class UserRepository : IUserRepository
     _context.SaveChanges();
   }
 
-  public void Update(UserModel user)
-  {
-    _context.Users.Update(user);
-    _context.SaveChanges();
-  }
-
-  public void Delete(UserModel user)
-  {
-    _context.Users.Remove(user);
-    _context.SaveChanges();
-  }
-
-  public UserModel? GetByCPF(UserLoginDto user)
-  {
-    var userExist = _context.Users.FirstOrDefault(user => user.CPF == user.CPF);
-
-    return userExist;
-  }
-
   public void Subscription(int userId, int courseId)
   {
     var user = _context.Users.Find(userId);
     var course = _context.Courses.Find(courseId);
 
+    if (user == null || course == null) throw new ArgumentNullException($"user id: {userId} or course id: {courseId} not found");
+
     user.Courses.Add(course);
 
     _context.SaveChanges();
-  }
-
-  public List<UserModel> Search(string userName)
-  {
-    return _context.Users.Where(x => x.Name.ToUpper().Contains(userName.ToUpper())).ToList();
   }
 }

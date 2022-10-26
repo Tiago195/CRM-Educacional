@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BE3vZVWqmOggjCnFvwi+4hXZZKNYf9P9dvo3n3uyq69TXnQi4ud/MCRCJAh75YgQFZPa4s/5OPErnyVVAQc1Bg==",
+  "dgSpecHash": "/+lPQoHZIZY7PN32fBynHQuIUJ0jeFAQ9xx/FagoQ14fBDL6k395kQIctOeU58CDRC8egSKsLaxAyQB26IZ/mg==",
   "success": true,
   "projectFilePath": "/home/tiago/CRM-Educacional/CRM-Educacional.Test/CRM-Educacional.Test.csproj",
   "expectedPackageFiles": [
     "/home/tiago/.nuget/packages/anglesharp/0.17.1/anglesharp.0.17.1.nupkg.sha512",
+    "/home/tiago/.nuget/packages/castle.core/5.1.0/castle.core.5.1.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/home/tiago/.nuget/packages/fluentassertions/6.8.0/fluentassertions.6.8.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
@@ -64,6 +65,7 @@
     "/home/tiago/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "/home/tiago/.nuget/packages/moq/4.18.2/moq.4.18.2.nupkg.sha512",
     "/home/tiago/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
     "/home/tiago/.nuget/packages/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg.sha512",
     "/home/tiago/.nuget/packages/nuget.frameworks/5.11.0/nuget.frameworks.5.11.0.nupkg.sha512",
