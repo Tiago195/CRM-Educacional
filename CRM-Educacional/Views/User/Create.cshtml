@@ -12,6 +12,10 @@
   <div class="form-floating mb-3">
     <input type="email" class="form-control" asp-for="Email" id="Email" placeholder="email">
     <label for="Email" class="form-label">Email</label>
+    @if (ViewData["Error"] != null)
+    {
+      <span class="field-validation-error">@ViewData["Error"]</span>
+    }
     @Html.ValidationMessageFor(x => x.Email)
   </div>
 

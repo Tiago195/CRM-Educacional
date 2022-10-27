@@ -41,6 +41,10 @@ public class UserRepository : IUserRepository
 
   public void Create(UserModel user)
   {
+    var userExist = _context.Users.FirstOrDefault(x => x.Email == user.Email);
+
+    if (userExist != null) throw new Exception("User already exist");
+
     _context.Users.Add(user);
     _context.SaveChanges();
   }

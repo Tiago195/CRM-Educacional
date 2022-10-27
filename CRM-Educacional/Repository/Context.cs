@@ -14,8 +14,12 @@ public class Context : DbContext, IContext
   {
     if (!optionsBuilder.IsConfigured)
     {
-      var server = Environment.GetEnvironmentVariable("server");
-      optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb"));
+      optionsBuilder.UseSqlServer(@$"
+        Server=127.0.0.1;
+        Database=CRM-Educacional;
+        User=SA;
+        Password=Password12;
+      ");
     }
   }
   protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -23,7 +27,6 @@ public class Context : DbContext, IContext
     modelBuilder.Entity<UserModel>()
     .HasMany(x => x.Courses)
     .WithMany(x => x.Users);
-
     modelBuilder.Entity<UserModel>().HasData(
       new UserModel
       {
@@ -31,7 +34,7 @@ public class Context : DbContext, IContext
         Name = "Fadiga",
         Phone = "(32) 89745-6544",
         Email = "Fadiga@email.com",
-        CPF = "06005932170"
+        CPF = "060.059.321-70"
       },
       new UserModel
       {
@@ -39,7 +42,7 @@ public class Context : DbContext, IContext
         Name = "Tiago",
         Phone = "(22) 99748-4850",
         Email = "Tiago@email.com",
-        CPF = "32145647770",
+        CPF = "321.456.477-70",
       }
     );
     modelBuilder.Entity<CourseModel>().HasData(

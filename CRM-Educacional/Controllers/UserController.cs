@@ -29,7 +29,15 @@ public class UserController : Controller
   {
     if (!ModelState.IsValid) return View(user);
 
-    _repository.Create(user);
+    try
+    {
+      _repository.Create(user);
+    }
+    catch (System.Exception e)
+    {
+      ViewData["Error"] = e.Message;
+      return View(user);
+    }
 
     return View("Index", _repository.GetAll());
   }
@@ -51,7 +59,8 @@ public class UserController : Controller
     try
     {
       _repository.Subscription(id, int.Parse(Request.Form["Id"]));
-      return View("Info", new { id = id });
+
+      return RedirectToAction("Info", new { Id = id });
     }
     catch (System.Exception)
     {

@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "/+lPQoHZIZY7PN32fBynHQuIUJ0jeFAQ9xx/FagoQ14fBDL6k395kQIctOeU58CDRC8egSKsLaxAyQB26IZ/mg==",
+  "dgSpecHash": "4e1pp4KP8Cr61smv06UubAnLdZOawsmi8OkTJDKrYVdOym2fmarwPRNQoyTXg//PiTMFE8Sq+Nq+sWFn60FD5Q==",
   "success": true,
   "projectFilePath": "/home/tiago/CRM-Educacional/CRM-Educacional.Test/CRM-Educacional.Test.csproj",
   "expectedPackageFiles": [
-    "/home/tiago/.nuget/packages/anglesharp/0.17.1/anglesharp.0.17.1.nupkg.sha512",
     "/home/tiago/.nuget/packages/castle.core/5.1.0/castle.core.5.1.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/home/tiago/.nuget/packages/fluentassertions/6.8.0/fluentassertions.6.8.0.nupkg.sha512",
@@ -146,7 +145,7 @@
     "/home/tiago/.nuget/packages/system.security.permissions/4.7.0/system.security.permissions.4.7.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/system.security.principal.windows/4.7.0/system.security.principal.windows.4.7.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
-    "/home/tiago/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
+    "/home/tiago/.nuget/packages/system.text.encoding.codepages/4.7.0/system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/system.text.encoding.extensions/4.3.0/system.text.encoding.extensions.4.3.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/home/tiago/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512",

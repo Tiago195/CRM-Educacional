@@ -34,7 +34,6 @@
     ".NETCoreApp,Version=v6.0": {
       "CRM-Educacional.Test/1.0.0": {
         "dependencies": {
-          "AngleSharp": "0.17.1",
           "CRM-Educacional": "1.0.0",
           "FluentAssertions": "6.8.0",
           "Microsoft.AspNetCore.Mvc.Testing": "6.0.10",
@@ -341,21 +340,6 @@
           "CRM-Educacional.Test.dll": {}
         }
       },
-      "AngleSharp/0.17.1": {
-        "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Text.Encoding.CodePages": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/AngleSharp.dll": {
-            "assemblyVersion": "0.17.1.0",
-            "fileVersion": "0.17.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/AngleSharp.dll": {}
-        }
-      },
       "Castle.Core/5.1.0": {
         "dependencies": {
           "System.Diagnostics.EventLog": "6.0.0"
@@ -446,7 +430,7 @@
           "System.Diagnostics.DiagnosticSource": "6.0.0",
           "System.Runtime.Caching": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0",
-          "System.Text.Encoding.CodePages": "6.0.0"
+          "System.Text.Encoding.CodePages": "4.7.0"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
@@ -1991,9 +1975,9 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Text.Encoding.CodePages/6.0.0": {
+      "System.Text.Encoding.CodePages/4.7.0": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "Microsoft.NETCore.Platforms": "3.1.0"
         }
       },
       "System.Text.Encoding.Extensions/4.3.0": {
@@ -3916,13 +3900,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AngleSharp/0.17.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5MPI4bbixlwxb0W/smOMeIR+QlxMy5/5jD+WnIAw4pBC+7AhLPe5bS3cLgQMJyvd6q0A48sG+uYOt/ep406GLA==",
-      "path": "anglesharp/0.17.1",
-      "hashPath": "anglesharp.0.17.1.nupkg.sha512"
-    },
     "Castle.Core/5.1.0": {
       "type": "package",
       "serviceable": true,
@@ -4910,12 +4887,12 @@
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/6.0.0": {
+    "System.Text.Encoding.CodePages/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
-      "path": "system.text.encoding.codepages/6.0.0",
-      "hashPath": "system.text.encoding.codepages.6.0.0.nupkg.sha512"
+      "sha512": "sha512-aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
+      "path": "system.text.encoding.codepages/4.7.0",
+      "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
     },
     "System.Text.Encoding.Extensions/4.3.0": {
       "type": "package",
