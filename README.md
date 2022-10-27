@@ -1,4 +1,4 @@
-# nome piriri
+# CRM Manager
 
 Este projeto foi feito para auxiliar o usuario a ter controle de uma central de cursos.
 
@@ -19,7 +19,15 @@ Este projeto foi feito para auxiliar o usuario a ter controle de uma central de 
  - Moq
  - Docker
  
+## Dependencias
+Para iniciar o projeto você vai precisar ter dotnet e ef instalados na maquina com a versão 6
+ 
 ## Como inicializar o projeto
+
+Clone o projeto
+```bash
+git clone git@github.com:Tiago195/CRM-Educacional.git
+```
 
 Inicialize o banco de dados atraves do comando
 ```docker
@@ -28,6 +36,11 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Password12" \
    -d \
    mcr.microsoft.com/mssql/server:2022-latest
 ```
+Subir o banco
+```bash
+dotnet ef database update --project CRM-Educacional
+```
+
 Para inicializar a aplicação
 ```bash
 dotnet run --project CRM-Educacional
