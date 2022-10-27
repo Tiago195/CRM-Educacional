@@ -13,6 +13,6 @@ public class CourseModel
   [Required(ErrorMessage = "Tempo do curso é obrigatorio.")]
   [Range(0, 10000, ErrorMessage = "Tempo de curso invalido.")]
   public string Duration { get; set; }
-  public ICollection<UserModel> Users { get; set; }
+  public ICollection<UserModel> Users { get; set; } = new List<UserModel>();
   // public List<CourseUser> CourseUsers { get; set; }
 }

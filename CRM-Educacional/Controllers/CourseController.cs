@@ -28,8 +28,9 @@ public class CourseController : Controller
   public IActionResult Create(CourseModel course)
   {
     if (!ModelState.IsValid) return View(course);
+
     _repository.Create(course);
-    return View("Index");
+    return RedirectToAction("Index");
   }
 
 }
