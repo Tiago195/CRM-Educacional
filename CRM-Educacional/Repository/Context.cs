@@ -18,7 +18,7 @@ public class Context : DbContext, IContext
         Server=127.0.0.1;
         Database=CRM-Educacional;
         User=SA;
-        Password=Password12
+        Password=Password12;
       ");
     }
   }
@@ -27,6 +27,45 @@ public class Context : DbContext, IContext
     modelBuilder.Entity<UserModel>()
     .HasMany(x => x.Courses)
     .WithMany(x => x.Users);
+
+    modelBuilder.Entity<UserModel>().HasData(
+      new UserModel
+      {
+        Id = 1,
+        Name = "Fadiga",
+        Phone = "(32) 89745-6544",
+        Email = "Fadiga@email.com",
+        CPF = "06005932170"
+      },
+      new UserModel
+      {
+        Id = 2,
+        Name = "Tiago",
+        Phone = "(22) 99748-4850",
+        Email = "Tiago@email.com",
+        CPF = "32145647770",
+      }
+    );
+    modelBuilder.Entity<CourseModel>().HasData(
+      new CourseModel
+      {
+        Id = 1,
+        Name = "C#",
+        Duration = "1200"
+      },
+      new CourseModel
+      {
+        Id = 2,
+        Name = "JavaScript",
+        Duration = "800"
+      },
+      new CourseModel
+      {
+        Id = 3,
+        Name = "Python",
+        Duration = "1350"
+      }
+    );
   }
 
 }

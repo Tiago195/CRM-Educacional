@@ -50,11 +50,32 @@ namespace CRM_Educacional.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Duration = "1200",
+                            Name = "C#"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Duration = "800",
+                            Name = "JavaScript"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Duration = "1350",
+                            Name = "Python"
+                        });
                 });
 
             modelBuilder.Entity("CRM_Educacional.Models.UserModel", b =>
@@ -67,23 +88,45 @@ namespace CRM_Educacional.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CPF = "06005932170",
+                            Email = "Fadiga@email.com",
+                            Name = "Fadiga",
+                            Phone = "(32) 89745-6544"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CPF = "32145647770",
+                            Email = "Tiago@email.com",
+                            Name = "Tiago",
+                            Phone = "(22) 99748-4850"
+                        });
                 });
 
             modelBuilder.Entity("CourseModelUserModel", b =>

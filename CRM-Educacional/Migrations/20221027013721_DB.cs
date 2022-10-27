@@ -4,7 +4,7 @@
 
 namespace CRM_Educacional.Migrations
 {
-    public partial class db : Migration
+    public partial class DB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace CRM_Educacional.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Duration = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -28,9 +28,10 @@ namespace CRM_Educacional.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(14)", maxLength: 14, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -59,6 +60,25 @@ namespace CRM_Educacional.Migrations
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Courses",
+                columns: new[] { "Id", "Duration", "Name" },
+                values: new object[,]
+                {
+                    { 1, "1200", "C#" },
+                    { 2, "800", "JavaScript" },
+                    { 3, "1350", "Python" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "CPF", "Email", "Name", "Phone" },
+                values: new object[,]
+                {
+                    { 1, "06005932170", "Fadiga@email.com", "Fadiga", "(32) 89745-6544" },
+                    { 2, "32145647770", "Tiago@email.com", "Tiago", "(22) 99748-4850" }
                 });
 
             migrationBuilder.CreateIndex(

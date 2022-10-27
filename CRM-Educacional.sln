@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM-Educacional", "CRM-Educacional\CRM-Educacional.csproj", "{0BC8BA20-7E82-4D54-B4BC-D4F0781B6FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM-Educacional.Test", "CRM-Educacional.Test\CRM-Educacional.Test.csproj", "{450CF14F-BE6E-4E51-B717-AA07EE4BB9D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BC8BA20-7E82-4D54-B4BC-D4F0781B6FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC8BA20-7E82-4D54-B4BC-D4F0781B6FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC8BA20-7E82-4D54-B4BC-D4F0781B6FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC8BA20-7E82-4D54-B4BC-D4F0781B6FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450CF14F-BE6E-4E51-B717-AA07EE4BB9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450CF14F-BE6E-4E51-B717-AA07EE4BB9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450CF14F-BE6E-4E51-B717-AA07EE4BB9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450CF14F-BE6E-4E51-B717-AA07EE4BB9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

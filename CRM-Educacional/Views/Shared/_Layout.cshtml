@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CRM_Educacional</title>
+    <title>@ViewData["Title"] - CRM Manager</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CRM_Educacional.styles.css" asp-append-version="true" />
@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CRM_Educacional</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CRM Manager</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,17 +31,10 @@
                             <a class="nav-link" asp-area="" asp-controller="User" asp-action="Create">Cadastrar
                                 candidato</a>
                         </li>
-                        @* <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="User" asp-action="Login">Login</a>
-                            </li> *@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Course" asp-action="Create">Cadastrar
                                 curso</a>
                         </li>
-                        @* <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="User" asp-action="Subscription">Nova
-                            inscrição</a>
-                            </li> *@
                     </ul>
                 </div>
             </div>
@@ -57,7 +50,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - CRM_Educacional - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - CRM Manager - Privacy
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
