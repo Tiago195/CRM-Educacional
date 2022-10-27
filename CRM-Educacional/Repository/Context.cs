@@ -14,12 +14,8 @@ public class Context : DbContext, IContext
   {
     if (!optionsBuilder.IsConfigured)
     {
-      optionsBuilder.UseSqlServer(@"
-        Server=127.0.0.1;
-        Database=CRM-Educacional;
-        User=SA;
-        Password=Password12;
-      ");
+      var server = Environment.GetEnvironmentVariable("server");
+      optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb"));
     }
   }
   protected override void OnModelCreating(ModelBuilder modelBuilder)
