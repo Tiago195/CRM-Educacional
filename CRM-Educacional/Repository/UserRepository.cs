@@ -20,7 +20,6 @@ public class UserRepository : IUserRepository
   public UserInfoDto? GetById(int userId)
   {
     var user = _context.Users.Find(userId);
-    var courses = _context.Courses.Where(x => x.Users.Any(e => e.Id == userId)).ToList();
     var otherCourses = _context.Courses.Where(x => x.Users.All(e => e.Id != userId)).ToList();
 
     if (user == null) throw new ArgumentNullException($"user id: {userId} not found");
@@ -32,7 +31,7 @@ public class UserRepository : IUserRepository
       Email = user.Email,
       Name = user.Name,
       Phone = user.Phone,
-      MyCourses = courses,
+      MyCourses = user.Courses.ToList(),
       OtherCourses = otherCourses
     };
 

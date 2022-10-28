@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  db:
+    container_name: CRM_db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 3002:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password12
+  crmeducacional:
+    container_name: CRM_app
+    image: crmeducacional
+    build:
+      context: .
+      dockerfile: CRM-Educacional/Dockerfile
+    ports:
+      - 3001:80
+    environment:
+      # - ASPNETCORE_ENVIRONMENT=Development
+      - DB_HOST=db
+      - DB_NAME=CRM_Menager
+      - DB_SA_PASSWORD=Password12
+    depends_on:
+      - db
